@@ -1,0 +1,79 @@
+/* Existing styles */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Ensure the nav is positioned relatively */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
+
+/* New styles for responsive hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-light--2);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-dark--0);
+    padding: 1rem 0;
+    gap: 2rem;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

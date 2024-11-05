@@ -1,0 +1,12 @@
+.countryList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.countryList > li {
+  flex-basis: calc(50% - 0.8rem);
+  flex-grow: 0;
+}

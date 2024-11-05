@@ -1,0 +1,66 @@
+.pricing {
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+}
+
+.pricing section {
+  width: clamp(80rem, 80%, 90rem);
+  margin: 6rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: center;
+}
+
+.pricing img {
+  width: 100%;
+}
+
+.pricing h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.pricing p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+.pricing section a {
+  margin-top: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pricing {
+    margin: 0;
+    min-height: 100vh;
+    padding: 2.5rem;
+  }
+
+  .pricing section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+    margin: 30px 0;
+  }
+
+  .pricing img {
+    order: -1; /* Move the image to the top */
+  }
+
+  .pricing h2 {
+    font-size: 3.5rem;
+  }
+
+  .pricing p {
+    font-size: 1.5rem;
+  }
+}

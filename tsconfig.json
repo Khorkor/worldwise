@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": false, // Set this to false to disable unused local checks
+    "noUnusedParameters": false // Optional: Set to false if you also want to ignore unused parameters
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
